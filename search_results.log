@@ -1,0 +1,54 @@
+2025-05-13 01:19:59,423 [INFO] Searching for products with keyword: thermage
+2025-05-13 01:19:59,425 [INFO] ====== WebDriver manager ======
+2025-05-13 01:20:00,293 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:20:02,161 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:20:02,639 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 01:20:03,893 [INFO] Accessing search URL: https://www.directdermasupplies.com/search?q=thermage
+2025-05-13 01:20:12,045 [INFO] Found 0 matching products
+2025-05-13 01:20:31,741 [INFO] Searching for products with keyword: filler
+2025-05-13 01:20:31,742 [INFO] ====== WebDriver manager ======
+2025-05-13 01:20:32,540 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:20:32,989 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:20:33,431 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 01:20:34,572 [INFO] Accessing search URL: https://www.directdermasupplies.com/search?q=filler
+2025-05-13 01:20:42,576 [INFO] Found 0 matching products
+2025-05-13 01:22:23,316 [INFO] Searching for products with keyword: thermage
+2025-05-13 01:22:23,316 [INFO] ====== WebDriver manager ======
+2025-05-13 01:22:24,065 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:22:24,518 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:22:24,966 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 01:22:26,145 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=thermage
+2025-05-13 01:22:34,237 [INFO] Found 10 matching products
+2025-05-13 01:22:36,364 [INFO] Created temporary URL file with 10 URLs: C:\Users\lapmi\AppData\Local\Temp\tmpqxh3nlug.txt
+2025-05-13 01:22:36,365 [INFO] Running scraper with command: python run_scraper.py --input C:\Users\lapmi\AppData\Local\Temp\tmpqxh3nlug.txt --output thermage_results.json
+2025-05-13 01:23:49,209 [INFO] Successfully scraped 10 products
+2025-05-13 01:23:49,212 [INFO] Search and scraping complete. Results saved to thermage_results.json
+2025-05-13 01:43:10,315 [INFO] Searching for products with keyword: thermage
+2025-05-13 01:43:10,316 [INFO] ====== WebDriver manager ======
+2025-05-13 01:43:11,029 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:43:11,494 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:43:11,951 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 01:43:13,132 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=thermage
+2025-05-13 01:43:22,855 [INFO] Found 10 matching products
+2025-05-13 01:43:24,941 [INFO] Created temporary URL file with 10 URLs: C:\Users\lapmi\AppData\Local\Temp\tmpntonl_49.txt
+2025-05-13 01:43:24,941 [INFO] Running scraper with command: python run_scraper.py --input C:\Users\lapmi\AppData\Local\Temp\tmpntonl_49.txt --output search_results\thermage_results.json
+2025-05-13 01:44:32,992 [INFO] Successfully scraped 10 products
+2025-05-13 01:44:32,993 [INFO] Search and scraping complete. Results saved to search_results\thermage_results.json
+2025-05-13 01:44:33,512 [INFO] Searching for products with keyword: filler
+2025-05-13 01:44:33,513 [INFO] ====== WebDriver manager ======
+2025-05-13 01:44:34,199 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:44:34,644 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:44:35,101 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 01:44:36,325 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=filler
+2025-05-13 01:44:42,454 [INFO] Found 13 matching products
+2025-05-13 01:44:44,560 [INFO] Created temporary URL file with 13 URLs: C:\Users\lapmi\AppData\Local\Temp\tmpe9ykxwhi.txt
+2025-05-13 01:44:44,560 [INFO] Running scraper with command: python run_scraper.py --input C:\Users\lapmi\AppData\Local\Temp\tmpe9ykxwhi.txt --output search_results\filler_results.json
+2025-05-13 01:46:18,467 [INFO] Successfully scraped 13 products
+2025-05-13 01:46:18,467 [INFO] Search and scraping complete. Results saved to search_results\filler_results.json
+2025-05-13 01:46:19,153 [INFO] Searching for products with keyword: botox
+2025-05-13 01:46:19,153 [INFO] ====== WebDriver manager ======
+2025-05-13 01:46:19,858 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:46:20,316 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:46:20,769 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 01:46:21,946 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=botox
+2025-05-13 01:46:29,566 [INFO] Found 0 matching products

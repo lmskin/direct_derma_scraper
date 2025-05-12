@@ -19,6 +19,7 @@ This scraper is designed to reliably extract product prices from Direct Derma Su
 - Provides detailed error logging
 - Creates HTML snapshots for debugging
 - Gracefully handles 404 and other HTTP error responses
+- Search for products by keyword and get their prices
 
 ## Project Structure
 
@@ -36,12 +37,15 @@ direct_derma_scraper/
 │       └── product_price.py
 ├── debug_output/        # Contains HTML snapshots for debugging
 ├── run_scraper.py       # Utility script for easy execution
+├── search_products.py   # Tool for searching products by keyword
 ├── urls_to_scrape.txt   # Sample file with URLs to scrape
 ├── requirements.txt     # Main requirements file
 ├── scraper.log          # Log file with detailed execution information
+├── search_results.log   # Log file for search operations
 ├── scrapy.cfg
 ├── README.md
-└── price_data.json      # Output data file
+├── price_data.json      # Output data file
+└── search_results.json  # Results from keyword searches
 ```
 
 ## Requirements
@@ -84,6 +88,51 @@ Create a text file with one URL per line, then run:
 ```
 python run_scraper.py --input urls_to_scrape.txt --output results.json
 ```
+
+### Searching Products by Keyword
+
+Search for products using a keyword and get their prices:
+
+```
+python search_products.py --keyword "thermage" --output search_results.json
+```
+
+This will:
+1. Search the Direct Derma website for products matching the keyword
+2. Extract prices for all matching products
+3. Display the results in a readable format with a price summary table
+4. Save detailed results to the specified output file
+
+### Batch Searching with Multiple Keywords
+
+To search for multiple products using keywords from a file:
+
+1. Create a text file with one keyword per line, e.g., `keywords_to_scrape.txt`
+2. Run the batch search script:
+
+```
+python batch_search.py --input keywords_to_scrape.txt --output-dir search_results
+```
+
+This will:
+1. Process each keyword in the file
+2. Search for products matching each keyword
+3. Save results to separate JSON files in the output directory
+4. Create a summary file with statistics for all searches
+
+### Exporting Results to Excel
+
+To export search results to an Excel spreadsheet for easier analysis:
+
+```
+python export_to_excel.py --input-dir search_results --output direct_derma_prices.xlsx
+```
+
+This will:
+1. Process all JSON result files in the specified directory
+2. Compile all product data into a single Excel spreadsheet
+3. Create a summary sheet with price statistics for each keyword
+4. Format the data for easy viewing and analysis
 
 ### Additional Options
 

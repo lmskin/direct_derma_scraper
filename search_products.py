@@ -166,7 +166,8 @@ def display_results(results, keyword):
     Args:
         results (list): List of product data dictionaries
         keyword (str): The keyword that was searched for
-    """    print("\n" + "=" * 80)
+    """
+    print("\n" + "=" * 80)
     print(f"SEARCH RESULTS FOR: '{keyword}'")
     print("=" * 80)
     

@@ -49,11 +49,13 @@ def main():
     
     # Set log level
     logging.getLogger().setLevel(getattr(logging, args.log_level))
-      # Check if input file exists
+    
+    # Check if input file exists
     if args.input and not os.path.exists(args.input):
         logger.error(f"Error: Input file {args.input} not found")
         sys.exit(1)
-      try:
+    
+    try:
         # Initialize the crawler process with project settings
         process = CrawlerProcess(get_project_settings())
         

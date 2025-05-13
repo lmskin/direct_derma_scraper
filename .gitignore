@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Log files
+*.log
+logs/
+
+# Debug output
+debug_output/
+
+# Local environment variables
+.env
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+temp_*
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Results and cache (optional, remove if you want to track these)
+# Uncomment if you don't want to track results
+#results/
+#search_results/
+#.scrapy/

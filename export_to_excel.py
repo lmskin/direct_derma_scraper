@@ -2,11 +2,11 @@
 """
 Export Search Results to Excel
 
-This script takes the JSON search results from the search_products.py script
-and exports them to an Excel spreadsheet for easy viewing and analysis.
+This script exports the JSON results from the batch search to an Excel file,
+organizing data with product name, price, currency, URL, and timestamp columns.
 
 Usage:
-    python export_to_excel.py --input-dir RESULTS_DIRECTORY [--output EXCEL_FILE]
+    python export_to_excel.py --input-dir INPUT_DIRECTORY --output OUTPUT_EXCEL_FILE
 """
 
 import argparse
@@ -15,11 +15,8 @@ import sys
 import logging
 import json
 import glob
-try:
-    import pandas as pd
-except ImportError:
-    print("pandas module is required. Install it with: pip install pandas openpyxl")
-    sys.exit(1)
+import pandas as pd
+from datetime import datetime
 
 def setup_logging():
     """Set up logging configuration"""
@@ -27,105 +24,110 @@ def setup_logging():
         level=logging.INFO,
         format='%(asctime)s [%(levelname)s] %(message)s',
         handlers=[
-            logging.FileHandler("excel_export.log"),
+            logging.FileHandler("export_excel.log"),
             logging.StreamHandler(sys.stdout)
         ]
     )
+
+def load_json_data(file_path):
+    """Load data from a JSON file"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        logging.error(f"Error reading {file_path}: {str(e)}")
+        return []
+
+def export_to_excel(input_dir, output_file):
+    """
+    Export all JSON files in input_dir to a single Excel file
+    
+    Args:
+        input_dir: Directory containing JSON result files
+        output_file: Path to save the Excel file
+    """
+    logger = logging.getLogger(__name__)
+    
+    # Check if input directory exists
+    if not os.path.exists(input_dir):
+        logger.error(f"Input directory {input_dir} does not exist")
+        return False
+    
+    # Find all JSON files in the input directory
+    json_files = glob.glob(os.path.join(input_dir, "*_results.json"))
+    
+    if not json_files:
+        logger.warning(f"No JSON result files found in {input_dir}")
+        return False
+    
+    logger.info(f"Found {len(json_files)} JSON files to process")
+    
+    # Collect all data
+    all_data = []
+    
+    for json_file in json_files:
+        keyword = os.path.basename(json_file).replace('_results.json', '')
+        data = load_json_data(json_file)
+        
+        # Add keyword information to each product
+        for product in data:
+            product['keyword'] = keyword
+            all_data.append(product)
+    
+    if not all_data:
+        logger.warning("No product data found in the JSON files")
+        return False
+    
+    # Convert to DataFrame
+    df = pd.DataFrame(all_data)
+    
+    # Reorder and select columns
+    columns = ['keyword', 'product_name', 'price', 'currency', 'product_url', 'timestamp']
+    
+    # Filter to only include columns that exist (in case some are missing)
+    available_columns = [col for col in columns if col in df.columns]
+    
+    # If any required columns are missing, add them with empty values
+    for col in columns:
+        if col not in df.columns:
+            df[col] = ''
+    
+    df = df[columns]
+    
+    # Save to Excel
+    try:
+        df.to_excel(output_file, index=False, sheet_name='Products')
+        logger.info(f"Successfully exported {len(df)} products to {output_file}")
+        return True
+    except Exception as e:
+        logger.error(f"Error exporting to Excel: {str(e)}")
+        return False
 
 def main():
     setup_logging()
     logger = logging.getLogger(__name__)
     
     parser = argparse.ArgumentParser(description='Export search results to Excel')
-    parser.add_argument('--input-dir', default='search_results', 
-                        help='Directory containing JSON result files (default: search_results)')
-    parser.add_argument('--output', default='direct_derma_prices.xlsx', 
-                        help='Output Excel file name (default: direct_derma_prices.xlsx)')
+    parser.add_argument('--input-dir', required=True, help='Directory containing search result JSON files')
+    parser.add_argument('--output', default='search_results.xlsx', help='Output Excel file path')
     parser.add_argument('--log-level', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], 
-                        default='INFO', help='Set the logging level')
+                       default='INFO', help='Set the logging level')
     
     args = parser.parse_args()
     
     # Set log level
     logging.getLogger().setLevel(getattr(logging, args.log_level))
     
-    # Check if input directory exists
-    if not os.path.exists(args.input_dir):
-        # If not, check if a single JSON file was specified
-        if os.path.exists(args.input_dir) and args.input_dir.endswith('.json'):
-            json_files = [args.input_dir]
-        else:
-            logger.error(f"Error: Input directory {args.input_dir} not found")
-            sys.exit(1)
-    else:
-        # Find all JSON files in the input directory
-        json_files = glob.glob(os.path.join(args.input_dir, "*.json"))
-    
-    if not json_files:
-        logger.error(f"No JSON files found in {args.input_dir}")
-        sys.exit(1)
-    
-    logger.info(f"Found {len(json_files)} JSON files to process")
-    
-    # Create a pandas DataFrame to hold all the data
-    all_products = []
-    
     try:
-        # Process each JSON file
-        for json_file in json_files:
-            keyword = os.path.basename(json_file).replace('_results.json', '').replace('_', ' ')
-            
-            logger.info(f"Processing file: {json_file}")
-            
-            try:
-                with open(json_file, 'r') as f:
-                    data = json.load(f)
-                
-                # Add keyword as a field to each product
-                for product in data:
-                    product['search_keyword'] = keyword
-                    all_products.append(product)
-                
-                logger.info(f"Added {len(data)} products from {keyword}")
-                
-            except (json.JSONDecodeError, IOError) as e:
-                logger.error(f"Error processing {json_file}: {str(e)}")
+        success = export_to_excel(args.input_dir, args.output)
         
-        if not all_products:
-            logger.error("No product data found in the JSON files")
+        if success:
+            logger.info(f"Export completed successfully. Results saved to {args.output}")
+            print(f"\nExport completed successfully. Results saved to {args.output}")
+        else:
+            logger.error("Export failed")
             sys.exit(1)
-        
-        # Create DataFrame
-        df = pd.DataFrame(all_products)
-        
-        # Reorder columns to put the most important ones first
-        column_order = ['search_keyword', 'product_name', 'price', 'currency', 'product_url', 'timestamp']
-        other_columns = [col for col in df.columns if col not in column_order]
-        df = df[column_order + other_columns]
-        
-        # Sort by keyword and price
-        df = df.sort_values(['search_keyword', 'price'], ascending=[True, True])
-        
-        # Save to Excel
-        logger.info(f"Saving {len(df)} products to {args.output}")
-        df.to_excel(args.output, index=False, sheet_name="Product Prices")
-        
-        # Format the Excel file
-        with pd.ExcelWriter(args.output, engine='openpyxl', mode='a') if hasattr(pd, 'ExcelWriter') else None as writer:
-            if writer:
-                # Create summary sheet
-                summary_data = df.groupby('search_keyword').agg(
-                    count=('product_name', 'count'),
-                    min_price=('price', lambda x: float(min(x)) if len(x) > 0 and all(x) else None),
-                    max_price=('price', lambda x: float(max(x)) if len(x) > 0 and all(x) else None),
-                    avg_price=('price', lambda x: sum(float(p) for p in x if p) / len([p for p in x if p]) if any(p for p in x) else None)
-                ).reset_index()
-                
-                summary_data.to_excel(writer, index=False, sheet_name="Summary")
-        
-        logger.info(f"Export completed successfully. File saved to {args.output}")
-        print(f"\nExport completed successfully. File saved to {args.output}")
-        
+            
     except Exception as e:
         logger.error(f"An error occurred: {str(e)}", exc_info=True)
         sys.exit(1)

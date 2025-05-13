@@ -65,6 +65,10 @@ direct_derma_scraper/
 
 ## Installation
 
+
+
+python -m venv venv; .\venv\Scripts\Activate.ps1
+
 1. Clone the repository:
    ```
    git clone <repository-url>

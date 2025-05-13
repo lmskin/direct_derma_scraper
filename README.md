@@ -6,6 +6,13 @@ A robust web scraping tool built with Scrapy and Selenium to extract product pri
 
 This scraper is designed to reliably extract product prices from Direct Derma Supplies' website, even when prices are dynamically loaded with JavaScript. It combines Scrapy's powerful crawling capabilities with Selenium's browser automation to handle JavaScript rendering.
 
+## Recently Added Tools
+
+- **batch_search.py**: Search for multiple products using a list of keywords
+- **search_products.py**: Search for products by a specific keyword  
+- **generate_summary.py**: Generate a summary report from existing JSON result files
+- **cleanup.py**: Organize your workspace by moving logs and sorting result files
+
 ## Features
 
 - Extracts product prices using multiple fallback methods for reliability

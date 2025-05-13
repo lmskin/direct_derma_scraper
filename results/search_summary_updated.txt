@@ -1,0 +1,23 @@
+Direct Derma Search Summary (Updated) - 2025-05-13 14:17:54
+================================================================================
+
+Keyword: fixed
+Products found: 2
+Results file: fixed_results.json
+Products:
+  1. THERMAGE EYE TIP 0.25CM2, 450 REP - EUR 240.00
+  2. THERMAGE TOTAL TIP 3.0CM2, 900 REP - EUR 355.00
+--------------------------------------------------
+
+Keyword: thermage
+Products found: 10
+Results file: thermage_results.json
+Products:
+  1. THERMAGE EYE TIP 0.25CM2, 450 REP - EUR 240.00
+  2. THERMAGE TOTAL TIP 3.0CM2, 900 REP - EUR 355.00
+  3. THERMAGE COUPLING FLUID 60 ML - EUR 40.00
+  4. THERMAGE FLX EYE TIP 0.25CM2, 450 REP - EUR 280.00
+  5. THERMAGE FLX MARKING PAPER 4.0CM - EUR 40.00
+  ... and 5 more products
+--------------------------------------------------
+

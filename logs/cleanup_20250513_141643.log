@@ -1,0 +1,9 @@
+2025-05-13 14:16:43,259 [INFO] Created directory: archive
+2025-05-13 14:16:43,259 [INFO] Created directory: results
+2025-05-13 14:16:43,259 [INFO] Moved batch_search.log to logs\batch_search.log
+2025-05-13 14:16:43,265 [INFO] Moved scraper.log to logs\scraper.log
+2025-05-13 14:16:43,265 [INFO] Moved search_results.log to logs\search_results.log
+2025-05-13 14:16:43,265 [INFO] Moved fixed_results.json to results\fixed_results.json
+2025-05-13 14:16:43,265 [INFO] Moved thermage_results.json to results\thermage_results.json
+2025-05-13 14:16:43,268 [INFO] Removed temporary file: page_source.html
+2025-05-13 14:16:43,268 [INFO] Cleanup completed successfully

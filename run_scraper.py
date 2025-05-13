@@ -49,31 +49,45 @@ def main():
     
     # Set log level
     logging.getLogger().setLevel(getattr(logging, args.log_level))
-    
-    # Check if input file exists
+      # Check if input file exists
     if args.input and not os.path.exists(args.input):
         logger.error(f"Error: Input file {args.input} not found")
         sys.exit(1)
-    
-    try:
-        # Use subprocess instead of CrawlerProcess to ensure file is created correctly
-        cmd = ["python", "-m", "scrapy", "crawl", "product_price", "-o", args.output]
+      try:
+        # Initialize the crawler process with project settings
+        process = CrawlerProcess(get_project_settings())
         
-        # Add appropriate arguments
+        # Set up the input file parameter
+        spider_kwargs = {}
+        
         if args.input:
-            cmd.extend(["-a", f"input_file={args.input}"])
+            if not os.path.exists(args.input):
+                logger.error(f"Input file {args.input} not found")
+                sys.exit(1)
+            spider_kwargs['input_file'] = args.input
             logger.info(f"Using input file: {args.input}")
         elif args.url:
             # Create a temporary file with the URL
             temp_file = 'temp_url.txt'
             with open(temp_file, 'w') as f:
                 f.write(args.url)
-            cmd.extend(["-a", f"input_file={temp_file}"])
+            spider_kwargs['input_file'] = temp_file
             logger.info(f"Scraping URL: {args.url}")
         
         # Run the spider
         logger.info(f"Starting scraper, output will be saved to {args.output}")
-        subprocess.run(cmd, check=True)
+        
+        # Configure output
+        process.settings.set('FEEDS', {
+            args.output: {
+                'format': 'json',
+                'encoding': 'utf8',
+                'overwrite': True,
+            },
+        })
+        
+        process.crawl('product_price', **spider_kwargs)
+        process.start()  # The script will block here until the crawling is finished
         
         # Clean up temporary file if needed
         if args.url and os.path.exists('temp_url.txt'):

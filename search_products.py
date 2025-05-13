@@ -132,8 +132,8 @@ def scrape_product_prices(urls, output_file):
     logger.info(f"Created temporary URL file with {len(urls)} URLs: {temp_filename}")
     
     try:
-        # Use the existing scraper to scrape the URLs
-        cmd = ["python", "run_scraper.py", "--input", temp_filename, "--output", output_file]
+        # Use the existing scraper to scrape the URLs with the same Python executable
+        cmd = [sys.executable, "run_scraper.py", "--input", temp_filename, "--output", output_file]
         logger.info(f"Running scraper with command: {' '.join(cmd)}")
         
         subprocess.run(cmd, check=True)
@@ -166,10 +166,12 @@ def display_results(results, keyword):
     Args:
         results (list): List of product data dictionaries
         keyword (str): The keyword that was searched for
-    """
-    print("\n" + "=" * 80)
+    """    print("\n" + "=" * 80)
     print(f"SEARCH RESULTS FOR: '{keyword}'")
     print("=" * 80)
+    
+    # Add this specific format for batch_search.py to detect
+    print(f"Found {len(results)} matching products")
     
     if not results:
         print("No matching products found.")

@@ -7,13 +7,15 @@ for each keyword, saving the results to separate JSON files.
 
 Usage:
     python batch_search.py --input KEYWORDS_FILE [--output-dir OUTPUT_DIRECTORY]
-"""
+e.g. python batch_search.py --input keywords_to_scrape.txt  --output-dir my_results
+    """
 
 import argparse
 import os
 import sys
 import logging
 import subprocess
+import json
 from datetime import datetime
 
 def setup_logging():
@@ -70,15 +72,13 @@ def main():
             # Process each keyword
             for i, keyword in enumerate(keywords, 1):
                 logger.info(f"Processing keyword {i}/{len(keywords)}: {keyword}")
-                
-                # Define output file for this keyword
+                  # Define output file for this keyword
                 output_file = os.path.join(args.output_dir, f"{keyword.replace(' ', '_')}_results.json")
                 
-                # Run the search_products.py script for this keyword
-                cmd = ["python", "search_products.py", "--keyword", keyword, "--output", output_file]
+                # Run the search_products.py script for this keyword using the same Python interpreter as this script
+                cmd = [sys.executable, "search_products.py", "--keyword", keyword, "--output", output_file]
                 logger.info(f"Running command: {' '.join(cmd)}")
-                
-                try:
+                  try:
                     process = subprocess.run(cmd, check=True, capture_output=True, text=True)
                     
                     # Check if the process was successful
@@ -113,6 +113,23 @@ def main():
                 except subprocess.CalledProcessError as e:
                     logger.error(f"Error processing keyword '{keyword}': {str(e)}")
                     logger.error(f"Stderr: {e.stderr}")
+                    
+                    # Check if output file exists despite the error
+                    if os.path.exists(output_file):
+                        try:
+                            with open(output_file, 'r') as f:
+                                data = json.load(f)
+                                result_count = len(data)
+                                
+                                # Write success to summary file if the output file exists and has valid JSON
+                                logger.info(f"Despite error, found results for '{keyword}'. Found {result_count} products.")
+                                summary.write(f"Keyword: {keyword}\n")
+                                summary.write(f"Products found: {result_count}\n")
+                                summary.write(f"Results file: {os.path.basename(output_file)}\n")
+                                summary.write("-" * 50 + "\n\n")
+                                continue
+                        except (json.JSONDecodeError, Exception) as json_err:
+                            logger.warning(f"Output file exists but contains invalid JSON: {str(json_err)}")
                     
                     # Write error to summary file
                     summary.write(f"Keyword: {keyword}\n")

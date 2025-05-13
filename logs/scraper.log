@@ -1,0 +1,420 @@
+2025-05-13 00:00:10,076 [INFO] Scrapy 2.13.0 started (bot: direct_derma)
+2025-05-13 00:00:10,157 [INFO] Versions:
+{'lxml': '5.4.0',
+ 'libxml2': '2.11.9',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '24.11.0',
+ 'Python': '3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 '
+           '64 bit (AMD64)]',
+ 'pyOpenSSL': '25.0.0 (OpenSSL 3.4.1 11 Feb 2025)',
+ 'cryptography': '44.0.3',
+ 'Platform': 'Windows-11-10.0.26100-SP0'}
+2025-05-13 00:00:10,157 [INFO] Using input file: urls_to_scrape.txt
+2025-05-13 00:00:10,158 [INFO] Starting scraper, output will be saved to updated_results.json
+2025-05-13 00:00:10,160 [INFO] Loaded 3 URLs from urls_to_scrape.txt
+2025-05-13 00:00:10,160 [INFO] ====== WebDriver manager ======
+2025-05-13 00:00:10,838 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 00:00:10,840 [DEBUG] Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2025-05-13 00:00:11,273 [DEBUG] https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 11035
+2025-05-13 00:00:11,283 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 00:00:11,284 [DEBUG] Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2025-05-13 00:00:11,713 [DEBUG] https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 11035
+2025-05-13 00:00:11,718 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 00:00:11,719 [DEBUG] Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2025-05-13 00:00:12,148 [DEBUG] https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 11035
+2025-05-13 00:00:12,154 [DEBUG] Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2025-05-13 00:00:12,584 [DEBUG] https://googlechromelabs.github.io:443 "GET /chrome-for-testing/known-good-versions-with-downloads.json HTTP/1.1" 200 91004
+2025-05-13 00:00:12,789 [INFO] WebDriver version 136.0.7103.92 selected
+2025-05-13 00:00:12,791 [INFO] Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.92/win32/chromedriver-win32.zip
+2025-05-13 00:00:12,792 [INFO] About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.92/win32/chromedriver-win32.zip
+2025-05-13 00:00:12,793 [DEBUG] Starting new HTTPS connection (1): storage.googleapis.com:443
+2025-05-13 00:00:13,665 [DEBUG] https://storage.googleapis.com:443 "GET /chrome-for-testing-public/136.0.7103.92/win32/chromedriver-win32.zip HTTP/1.1" 200 8824038
+2025-05-13 00:00:13,666 [INFO] Driver downloading response is 200
+2025-05-13 00:00:15,801 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 00:00:15,802 [DEBUG] Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2025-05-13 00:00:16,230 [DEBUG] https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 11035
+2025-05-13 00:00:16,338 [INFO] Driver has been saved in cache [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92]
+2025-05-13 00:00:16,340 [DEBUG] Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe
+2025-05-13 00:00:20,620 [DEBUG] Started executable: `C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe` in a child process with pid: 106796 using 0 to output -3
+2025-05-13 00:00:21,149 [DEBUG] POST http://localhost:65512/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'extensions': [], 'args': ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--window-size=1920,1080', 'user-agent=direct_derma_price_scraper (+http://www.yourdomain.com)']}}}}
+2025-05-13 00:00:21,151 [DEBUG] Starting new HTTP connection (1): localhost:65512
+2025-05-13 00:00:21,692 [DEBUG] http://localhost:65512 "POST /session HTTP/1.1" 200 0
+2025-05-13 00:00:21,692 [DEBUG] Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"136.0.7103.93","chrome":{"chromedriverVersion":"136.0.7103.92 (cb81a4cc5087a8303a6c8827ee2b80b71d26e334-refs/branch-heads/7103@{#1840})","userDataDir":"C:\\Users\\lapmi\\AppData\\Local\\Temp\\scoped_dir106796_1403709001"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:49165"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"8d5c76c53f469acfa9f24bc2aff41f46"}} | headers=HTTPHeaderDict({'Content-Length': '883', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:21,693 [DEBUG] Finished Request
+2025-05-13 00:00:21,693 [INFO] Enabled addons:
+[]
+2025-05-13 00:00:21,695 [DEBUG] Using selector: SelectSelector
+2025-05-13 00:00:21,697 [DEBUG] Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-05-13 00:00:21,697 [DEBUG] Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2025-05-13 00:00:21,709 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-05-13 00:00:21,709 [INFO] Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'direct_derma',
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 1,
+ 'HTTPCACHE_ENABLED': True,
+ 'HTTPCACHE_EXPIRATION_SECS': 86400,
+ 'NEWSPIDER_MODULE': 'direct_derma.spiders',
+ 'RETRY_TIMES': 3,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['direct_derma.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'direct_derma_price_scraper (+http://www.yourdomain.com)'}
+2025-05-13 00:00:21,772 [INFO] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware']
+2025-05-13 00:00:21,775 [INFO] Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-05-13 00:00:21,776 [INFO] Enabled item pipelines:
+[]
+2025-05-13 00:00:21,776 [INFO] Spider opened
+2025-05-13 00:00:21,783 [WARNING] C:\Users\lapmi\AppData\Local\Programs\Python\Python313\Lib\site-packages\scrapy\core\spidermw.py:433: ScrapyDeprecationWarning: direct_derma.spiders.product_price.ProductPriceSpider defines the deprecated start_requests() method. start_requests() has been deprecated in favor of a new method, start(), to support asynchronous code execution. start_requests() will stop being called in a future version of Scrapy. If you use Scrapy 2.13 or higher only, replace start_requests() with start(); note that start() is a coroutine (async def). If you need to maintain compatibility with lower Scrapy versions, when overriding start_requests() in a spider class, override start() as well; you can use super() to reuse the inherited start() implementation without copy-pasting. See the release notes of Scrapy 2.13 for details: https://docs.scrapy.org/en/2.13/news.html
+  warn(
+
+2025-05-13 00:00:21,783 [INFO] Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-05-13 00:00:21,784 [DEBUG] Using filesystem cache storage in C:\Users\lapmi\Desktop\web scrap\direct_derma_scraper\.scrapy\httpcache
+2025-05-13 00:00:21,786 [DEBUG] Crawled (200) <GET https://www.directdermasupplies.com/robots.txt> (referer: None) ['cached']
+2025-05-13 00:00:21,788 [DEBUG] Crawled (200) <GET https://www.directdermasupplies.com/products/thermage/thermage-eye-tip-0-25cm2-450-rep> (referer: None) ['cached']
+2025-05-13 00:00:21,791 [DEBUG] Crawled (200) <GET https://www.directdermasupplies.com/products/thermage/thermage-total-tip-3-0cm2-900-rep> (referer: None) ['cached']
+2025-05-13 00:00:21,792 [DEBUG] Crawled (404) <GET https://www.directdermasupplies.com/products/thermage/thermage-body-tip-16-0cm2-1200-rep> (referer: None) ['cached']
+2025-05-13 00:00:21,892 [DEBUG] POST http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/url {'url': 'https://www.directdermasupplies.com/products/thermage/thermage-eye-tip-0-25cm2-450-rep'}
+2025-05-13 00:00:26,194 [DEBUG] http://localhost:65512 "POST /session/8d5c76c53f469acfa9f24bc2aff41f46/url HTTP/1.1" 200 0
+2025-05-13 00:00:26,194 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:26,195 [DEBUG] Finished Request
+2025-05-13 00:00:31,196 [DEBUG] GET http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/source {}
+2025-05-13 00:00:31,227 [DEBUG] http://localhost:65512 "GET /session/8d5c76c53f469acfa9f24bc2aff41f46/source HTTP/1.1" 200 0
+2025-05-13 00:00:32,042 [DEBUG] Finished Request
+2025-05-13 00:00:32,043 [DEBUG] GET http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/title {}
+2025-05-13 00:00:32,048 [DEBUG] http://localhost:65512 "GET /session/8d5c76c53f469acfa9f24bc2aff41f46/title HTTP/1.1" 200 0
+2025-05-13 00:00:32,048 [DEBUG] Remote response: status=200 | data={"value":"Shop Thermage Eye Tip 0.25cm2, 450 REP here!"} | headers=HTTPHeaderDict({'Content-Length': '56', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:32,049 [DEBUG] Finished Request
+2025-05-13 00:00:32,049 [INFO] Page title: Shop Thermage Eye Tip 0.25cm2, 450 REP here!
+2025-05-13 00:00:32,049 [DEBUG] POST http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/element {'using': 'css selector', 'value': 'h1'}
+2025-05-13 00:00:32,074 [DEBUG] http://localhost:65512 "POST /session/8d5c76c53f469acfa9f24bc2aff41f46/element HTTP/1.1" 200 0
+2025-05-13 00:00:32,074 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.80201B14E97040565FAC168D6EBB721C.d.63DB9C9968A3F5DC68FBE0910F22E00D.e.123"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:32,075 [DEBUG] Finished Request
+2025-05-13 00:00:32,075 [DEBUG] GET http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/element/f.80201B14E97040565FAC168D6EBB721C.d.63DB9C9968A3F5DC68FBE0910F22E00D.e.123/text {}
+2025-05-13 00:00:32,082 [DEBUG] http://localhost:65512 "GET /session/8d5c76c53f469acfa9f24bc2aff41f46/element/f.80201B14E97040565FAC168D6EBB721C.d.63DB9C9968A3F5DC68FBE0910F22E00D.e.123/text HTTP/1.1" 200 0
+2025-05-13 00:00:32,083 [DEBUG] Remote response: status=200 | data={"value":"THERMAGE EYE TIP 0.25CM2, 450 REP"} | headers=HTTPHeaderDict({'Content-Length': '45', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:32,083 [DEBUG] Finished Request
+2025-05-13 00:00:32,083 [INFO] Found product name: THERMAGE EYE TIP 0.25CM2, 450 REP
+2025-05-13 00:00:32,083 [DEBUG] POST http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/element {'using': 'css selector', 'value': '.price.price--product-page'}
+2025-05-13 00:00:32,089 [DEBUG] http://localhost:65512 "POST /session/8d5c76c53f469acfa9f24bc2aff41f46/element HTTP/1.1" 200 0
+2025-05-13 00:00:32,090 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.80201B14E97040565FAC168D6EBB721C.d.63DB9C9968A3F5DC68FBE0910F22E00D.e.124"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:32,090 [DEBUG] Finished Request
+2025-05-13 00:00:32,090 [DEBUG] GET http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/element/f.80201B14E97040565FAC168D6EBB721C.d.63DB9C9968A3F5DC68FBE0910F22E00D.e.124/text {}
+2025-05-13 00:00:32,095 [DEBUG] http://localhost:65512 "GET /session/8d5c76c53f469acfa9f24bc2aff41f46/element/f.80201B14E97040565FAC168D6EBB721C.d.63DB9C9968A3F5DC68FBE0910F22E00D.e.124/text HTTP/1.1" 200 0
+2025-05-13 00:00:32,095 [DEBUG] Remote response: status=200 | data={"value":"EUR 240,00"} | headers=HTTPHeaderDict({'Content-Length': '22', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:32,096 [DEBUG] Finished Request
+2025-05-13 00:00:32,096 [INFO] Found price with method 1: EUR 240,00
+2025-05-13 00:00:32,096 [INFO] Cleaned price: 240.00
+2025-05-13 00:00:32,096 [INFO] Final price extracted: 240.00
+2025-05-13 00:00:32,096 [DEBUG] POST http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/url {'url': 'https://www.directdermasupplies.com/products/thermage/thermage-total-tip-3-0cm2-900-rep'}
+2025-05-13 00:00:33,027 [DEBUG] http://localhost:65512 "POST /session/8d5c76c53f469acfa9f24bc2aff41f46/url HTTP/1.1" 200 0
+2025-05-13 00:00:33,027 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:33,028 [DEBUG] Finished Request
+2025-05-13 00:00:38,029 [DEBUG] GET http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/source {}
+2025-05-13 00:00:38,060 [DEBUG] http://localhost:65512 "GET /session/8d5c76c53f469acfa9f24bc2aff41f46/source HTTP/1.1" 200 0
+2025-05-13 00:00:38,824 [DEBUG] Finished Request
+2025-05-13 00:00:38,825 [DEBUG] GET http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/title {}
+2025-05-13 00:00:38,830 [DEBUG] http://localhost:65512 "GET /session/8d5c76c53f469acfa9f24bc2aff41f46/title HTTP/1.1" 200 0
+2025-05-13 00:00:38,830 [DEBUG] Remote response: status=200 | data={"value":"Shop Thermage Total Tip 3.0cm2, 900 REP online | Get it now!"} | headers=HTTPHeaderDict({'Content-Length': '72', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:38,830 [DEBUG] Finished Request
+2025-05-13 00:00:38,830 [INFO] Page title: Shop Thermage Total Tip 3.0cm2, 900 REP online | Get it now!
+2025-05-13 00:00:38,831 [DEBUG] POST http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/element {'using': 'css selector', 'value': 'h1'}
+2025-05-13 00:00:38,835 [DEBUG] http://localhost:65512 "POST /session/8d5c76c53f469acfa9f24bc2aff41f46/element HTTP/1.1" 200 0
+2025-05-13 00:00:38,836 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.80201B14E97040565FAC168D6EBB721C.d.A431AC83CE85BD25A4810C2FEC32CB8C.e.201"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:38,836 [DEBUG] Finished Request
+2025-05-13 00:00:38,836 [DEBUG] GET http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/element/f.80201B14E97040565FAC168D6EBB721C.d.A431AC83CE85BD25A4810C2FEC32CB8C.e.201/text {}
+2025-05-13 00:00:38,841 [DEBUG] http://localhost:65512 "GET /session/8d5c76c53f469acfa9f24bc2aff41f46/element/f.80201B14E97040565FAC168D6EBB721C.d.A431AC83CE85BD25A4810C2FEC32CB8C.e.201/text HTTP/1.1" 200 0
+2025-05-13 00:00:38,841 [DEBUG] Remote response: status=200 | data={"value":"THERMAGE TOTAL TIP 3.0CM2, 900 REP"} | headers=HTTPHeaderDict({'Content-Length': '46', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:38,842 [DEBUG] Finished Request
+2025-05-13 00:00:38,842 [INFO] Found product name: THERMAGE TOTAL TIP 3.0CM2, 900 REP
+2025-05-13 00:00:38,842 [DEBUG] POST http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/element {'using': 'css selector', 'value': '.price.price--product-page'}
+2025-05-13 00:00:38,848 [DEBUG] http://localhost:65512 "POST /session/8d5c76c53f469acfa9f24bc2aff41f46/element HTTP/1.1" 200 0
+2025-05-13 00:00:38,849 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.80201B14E97040565FAC168D6EBB721C.d.A431AC83CE85BD25A4810C2FEC32CB8C.e.202"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:38,850 [DEBUG] Finished Request
+2025-05-13 00:00:38,850 [DEBUG] GET http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46/element/f.80201B14E97040565FAC168D6EBB721C.d.A431AC83CE85BD25A4810C2FEC32CB8C.e.202/text {}
+2025-05-13 00:00:38,869 [DEBUG] http://localhost:65512 "GET /session/8d5c76c53f469acfa9f24bc2aff41f46/element/f.80201B14E97040565FAC168D6EBB721C.d.A431AC83CE85BD25A4810C2FEC32CB8C.e.202/text HTTP/1.1" 200 0
+2025-05-13 00:00:38,869 [DEBUG] Remote response: status=200 | data={"value":"EUR 355,00"} | headers=HTTPHeaderDict({'Content-Length': '22', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:38,870 [DEBUG] Finished Request
+2025-05-13 00:00:38,870 [INFO] Found price with method 1: EUR 355,00
+2025-05-13 00:00:38,870 [INFO] Cleaned price: 355.00
+2025-05-13 00:00:38,870 [INFO] Final price extracted: 355.00
+2025-05-13 00:00:38,871 [ERROR] Error 404 when accessing https://www.directdermasupplies.com/products/thermage/thermage-body-tip-16-0cm2-1200-rep
+2025-05-13 00:00:38,872 [DEBUG] Scraped from <200 https://www.directdermasupplies.com/products/thermage/thermage-eye-tip-0-25cm2-450-rep>
+{'product_url': 'https://www.directdermasupplies.com/products/thermage/thermage-eye-tip-0-25cm2-450-rep', 'product_name': 'THERMAGE EYE TIP 0.25CM2, 450 REP', 'price': '240.00', 'currency': 'EUR', 'timestamp': '2025-05-13 00:00:32'}
+2025-05-13 00:00:38,873 [DEBUG] Scraped from <200 https://www.directdermasupplies.com/products/thermage/thermage-total-tip-3-0cm2-900-rep>
+{'product_url': 'https://www.directdermasupplies.com/products/thermage/thermage-total-tip-3-0cm2-900-rep', 'product_name': 'THERMAGE TOTAL TIP 3.0CM2, 900 REP', 'price': '355.00', 'currency': 'EUR', 'timestamp': '2025-05-13 00:00:38'}
+2025-05-13 00:00:38,873 [DEBUG] Scraped from <404 https://www.directdermasupplies.com/products/thermage/thermage-body-tip-16-0cm2-1200-rep>
+{'product_url': 'https://www.directdermasupplies.com/products/thermage/thermage-body-tip-16-0cm2-1200-rep', 'product_name': None, 'price': None, 'currency': None, 'timestamp': '2025-05-13 00:00:38', 'error': 'HTTP Error: 404'}
+2025-05-13 00:00:38,874 [INFO] Closing spider (finished)
+2025-05-13 00:00:38,874 [DEBUG] DELETE http://localhost:65512/session/8d5c76c53f469acfa9f24bc2aff41f46 {}
+2025-05-13 00:00:38,941 [DEBUG] http://localhost:65512 "DELETE /session/8d5c76c53f469acfa9f24bc2aff41f46 HTTP/1.1" 200 0
+2025-05-13 00:00:38,942 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:00:38,942 [DEBUG] Finished Request
+2025-05-13 00:00:40,987 [INFO] Dumping Scrapy stats:
+{'downloader/request_bytes': 1155,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 183696,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 3,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 19.203259,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 5, 12, 16, 0, 40, 987083, tzinfo=datetime.timezone.utc),
+ 'httpcache/hit': 4,
+ 'httpcompression/response_bytes': 329050,
+ 'httpcompression/response_count': 3,
+ 'item_scraped_count': 3,
+ 'items_per_minute': 9.473684210526317,
+ 'log_count/DEBUG': 71,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 18,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 4,
+ 'responses_per_minute': 12.631578947368421,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2025, 5, 12, 16, 0, 21, 783824, tzinfo=datetime.timezone.utc)}
+2025-05-13 00:00:40,988 [INFO] Spider closed (finished)
+2025-05-13 00:00:40,988 [ERROR] Output file updated_results.json was not created
+2025-05-13 00:00:40,989 [INFO] Scraping complete. Results saved to updated_results.json
+2025-05-13 00:02:12,621 [INFO] Scrapy 2.13.0 started (bot: direct_derma)
+2025-05-13 00:02:12,712 [INFO] Versions:
+{'lxml': '5.4.0',
+ 'libxml2': '2.11.9',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '24.11.0',
+ 'Python': '3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 '
+           '64 bit (AMD64)]',
+ 'pyOpenSSL': '25.0.0 (OpenSSL 3.4.1 11 Feb 2025)',
+ 'cryptography': '44.0.3',
+ 'Platform': 'Windows-11-10.0.26100-SP0'}
+2025-05-13 00:02:12,712 [INFO] Using input file: urls_to_scrape.txt
+2025-05-13 00:02:12,712 [INFO] Starting scraper, output will be saved to new_results.json
+2025-05-13 00:02:12,714 [INFO] Loaded 2 URLs from urls_to_scrape.txt
+2025-05-13 00:02:12,715 [INFO] ====== WebDriver manager ======
+2025-05-13 00:02:13,361 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 00:02:13,363 [DEBUG] Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2025-05-13 00:02:13,797 [DEBUG] https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 11035
+2025-05-13 00:02:13,810 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 00:02:13,811 [DEBUG] Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2025-05-13 00:02:14,243 [DEBUG] https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 11035
+2025-05-13 00:02:14,249 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 00:02:14,250 [DEBUG] Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe
+2025-05-13 00:02:14,254 [DEBUG] Started executable: `C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe` in a child process with pid: 102980 using 0 to output -3
+2025-05-13 00:02:14,758 [DEBUG] POST http://localhost:50259/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'extensions': [], 'args': ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--window-size=1920,1080', 'user-agent=direct_derma_price_scraper (+http://www.yourdomain.com)']}}}}
+2025-05-13 00:02:14,758 [DEBUG] Starting new HTTP connection (1): localhost:50259
+2025-05-13 00:02:15,302 [DEBUG] http://localhost:50259 "POST /session HTTP/1.1" 200 0
+2025-05-13 00:02:15,302 [DEBUG] Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"136.0.7103.93","chrome":{"chromedriverVersion":"136.0.7103.92 (cb81a4cc5087a8303a6c8827ee2b80b71d26e334-refs/branch-heads/7103@{#1840})","userDataDir":"C:\\Users\\lapmi\\AppData\\Local\\Temp\\scoped_dir102980_660085935"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:50266"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"abcd23faa78d8294782fcfaff119a10c"}} | headers=HTTPHeaderDict({'Content-Length': '882', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:15,303 [DEBUG] Finished Request
+2025-05-13 00:02:15,303 [INFO] Enabled addons:
+[]
+2025-05-13 00:02:15,305 [DEBUG] Using selector: SelectSelector
+2025-05-13 00:02:15,307 [DEBUG] Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-05-13 00:02:15,307 [DEBUG] Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2025-05-13 00:02:15,318 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-05-13 00:02:15,318 [INFO] Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'direct_derma',
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 1,
+ 'HTTPCACHE_ENABLED': True,
+ 'HTTPCACHE_EXPIRATION_SECS': 86400,
+ 'NEWSPIDER_MODULE': 'direct_derma.spiders',
+ 'RETRY_TIMES': 3,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['direct_derma.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'direct_derma_price_scraper (+http://www.yourdomain.com)'}
+2025-05-13 00:02:15,381 [INFO] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware']
+2025-05-13 00:02:15,383 [INFO] Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-05-13 00:02:15,384 [INFO] Enabled item pipelines:
+[]
+2025-05-13 00:02:15,384 [INFO] Spider opened
+2025-05-13 00:02:15,391 [WARNING] C:\Users\lapmi\AppData\Local\Programs\Python\Python313\Lib\site-packages\scrapy\core\spidermw.py:433: ScrapyDeprecationWarning: direct_derma.spiders.product_price.ProductPriceSpider defines the deprecated start_requests() method. start_requests() has been deprecated in favor of a new method, start(), to support asynchronous code execution. start_requests() will stop being called in a future version of Scrapy. If you use Scrapy 2.13 or higher only, replace start_requests() with start(); note that start() is a coroutine (async def). If you need to maintain compatibility with lower Scrapy versions, when overriding start_requests() in a spider class, override start() as well; you can use super() to reuse the inherited start() implementation without copy-pasting. See the release notes of Scrapy 2.13 for details: https://docs.scrapy.org/en/2.13/news.html
+  warn(
+
+2025-05-13 00:02:15,392 [INFO] Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-05-13 00:02:15,392 [DEBUG] Using filesystem cache storage in C:\Users\lapmi\Desktop\web scrap\direct_derma_scraper\.scrapy\httpcache
+2025-05-13 00:02:15,394 [DEBUG] Crawled (200) <GET https://www.directdermasupplies.com/robots.txt> (referer: None) ['cached']
+2025-05-13 00:02:15,396 [DEBUG] Crawled (200) <GET https://www.directdermasupplies.com/products/thermage/thermage-eye-tip-0-25cm2-450-rep> (referer: None) ['cached']
+2025-05-13 00:02:15,398 [DEBUG] Crawled (200) <GET https://www.directdermasupplies.com/products/thermage/thermage-total-tip-3-0cm2-900-rep> (referer: None) ['cached']
+2025-05-13 00:02:15,504 [DEBUG] POST http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/url {'url': 'https://www.directdermasupplies.com/products/thermage/thermage-eye-tip-0-25cm2-450-rep'}
+2025-05-13 00:02:19,407 [DEBUG] http://localhost:50259 "POST /session/abcd23faa78d8294782fcfaff119a10c/url HTTP/1.1" 200 0
+2025-05-13 00:02:19,408 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:19,408 [DEBUG] Finished Request
+2025-05-13 00:02:24,409 [DEBUG] GET http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/source {}
+2025-05-13 00:02:24,421 [DEBUG] http://localhost:50259 "GET /session/abcd23faa78d8294782fcfaff119a10c/source HTTP/1.1" 200 0
+2025-05-13 00:02:25,457 [DEBUG] Finished Request
+2025-05-13 00:02:25,458 [DEBUG] GET http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/title {}
+2025-05-13 00:02:25,462 [DEBUG] http://localhost:50259 "GET /session/abcd23faa78d8294782fcfaff119a10c/title HTTP/1.1" 200 0
+2025-05-13 00:02:25,463 [DEBUG] Remote response: status=200 | data={"value":"Shop Thermage Eye Tip 0.25cm2, 450 REP here!"} | headers=HTTPHeaderDict({'Content-Length': '56', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:25,463 [DEBUG] Finished Request
+2025-05-13 00:02:25,464 [INFO] Page title: Shop Thermage Eye Tip 0.25cm2, 450 REP here!
+2025-05-13 00:02:25,464 [DEBUG] POST http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/element {'using': 'css selector', 'value': 'h1'}
+2025-05-13 00:02:25,472 [DEBUG] http://localhost:50259 "POST /session/abcd23faa78d8294782fcfaff119a10c/element HTTP/1.1" 200 0
+2025-05-13 00:02:25,472 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.7177F5F22BEC6D3E423BCC69F7569B42.d.870A5C6B0B98E072E2D0E4DB4B368EBA.e.126"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:25,472 [DEBUG] Finished Request
+2025-05-13 00:02:25,473 [DEBUG] GET http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/element/f.7177F5F22BEC6D3E423BCC69F7569B42.d.870A5C6B0B98E072E2D0E4DB4B368EBA.e.126/text {}
+2025-05-13 00:02:25,480 [DEBUG] http://localhost:50259 "GET /session/abcd23faa78d8294782fcfaff119a10c/element/f.7177F5F22BEC6D3E423BCC69F7569B42.d.870A5C6B0B98E072E2D0E4DB4B368EBA.e.126/text HTTP/1.1" 200 0
+2025-05-13 00:02:25,480 [DEBUG] Remote response: status=200 | data={"value":"THERMAGE EYE TIP 0.25CM2, 450 REP"} | headers=HTTPHeaderDict({'Content-Length': '45', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:25,480 [DEBUG] Finished Request
+2025-05-13 00:02:25,480 [INFO] Found product name: THERMAGE EYE TIP 0.25CM2, 450 REP
+2025-05-13 00:02:25,480 [DEBUG] POST http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/element {'using': 'css selector', 'value': '.price.price--product-page'}
+2025-05-13 00:02:25,487 [DEBUG] http://localhost:50259 "POST /session/abcd23faa78d8294782fcfaff119a10c/element HTTP/1.1" 200 0
+2025-05-13 00:02:25,488 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.7177F5F22BEC6D3E423BCC69F7569B42.d.870A5C6B0B98E072E2D0E4DB4B368EBA.e.127"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:25,488 [DEBUG] Finished Request
+2025-05-13 00:02:25,488 [DEBUG] GET http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/element/f.7177F5F22BEC6D3E423BCC69F7569B42.d.870A5C6B0B98E072E2D0E4DB4B368EBA.e.127/text {}
+2025-05-13 00:02:25,493 [DEBUG] http://localhost:50259 "GET /session/abcd23faa78d8294782fcfaff119a10c/element/f.7177F5F22BEC6D3E423BCC69F7569B42.d.870A5C6B0B98E072E2D0E4DB4B368EBA.e.127/text HTTP/1.1" 200 0
+2025-05-13 00:02:25,493 [DEBUG] Remote response: status=200 | data={"value":"EUR 240,00"} | headers=HTTPHeaderDict({'Content-Length': '22', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:25,493 [DEBUG] Finished Request
+2025-05-13 00:02:25,493 [INFO] Found price with method 1: EUR 240,00
+2025-05-13 00:02:25,493 [INFO] Cleaned price: 240.00
+2025-05-13 00:02:25,494 [INFO] Final price extracted: 240.00
+2025-05-13 00:02:25,494 [DEBUG] POST http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/url {'url': 'https://www.directdermasupplies.com/products/thermage/thermage-total-tip-3-0cm2-900-rep'}
+2025-05-13 00:02:26,367 [DEBUG] http://localhost:50259 "POST /session/abcd23faa78d8294782fcfaff119a10c/url HTTP/1.1" 200 0
+2025-05-13 00:02:26,368 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:26,368 [DEBUG] Finished Request
+2025-05-13 00:02:31,370 [DEBUG] GET http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/source {}
+2025-05-13 00:02:31,384 [DEBUG] http://localhost:50259 "GET /session/abcd23faa78d8294782fcfaff119a10c/source HTTP/1.1" 200 0
+2025-05-13 00:02:32,099 [DEBUG] Finished Request
+2025-05-13 00:02:32,101 [DEBUG] GET http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/title {}
+2025-05-13 00:02:32,104 [DEBUG] http://localhost:50259 "GET /session/abcd23faa78d8294782fcfaff119a10c/title HTTP/1.1" 200 0
+2025-05-13 00:02:32,105 [DEBUG] Remote response: status=200 | data={"value":"Shop Thermage Total Tip 3.0cm2, 900 REP online | Get it now!"} | headers=HTTPHeaderDict({'Content-Length': '72', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:32,105 [DEBUG] Finished Request
+2025-05-13 00:02:32,105 [INFO] Page title: Shop Thermage Total Tip 3.0cm2, 900 REP online | Get it now!
+2025-05-13 00:02:32,105 [DEBUG] POST http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/element {'using': 'css selector', 'value': 'h1'}
+2025-05-13 00:02:32,130 [DEBUG] http://localhost:50259 "POST /session/abcd23faa78d8294782fcfaff119a10c/element HTTP/1.1" 200 0
+2025-05-13 00:02:32,130 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.7177F5F22BEC6D3E423BCC69F7569B42.d.50F9D8DC83EB02F7E8183C1D15672C76.e.204"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:32,130 [DEBUG] Finished Request
+2025-05-13 00:02:32,130 [DEBUG] GET http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/element/f.7177F5F22BEC6D3E423BCC69F7569B42.d.50F9D8DC83EB02F7E8183C1D15672C76.e.204/text {}
+2025-05-13 00:02:32,135 [DEBUG] http://localhost:50259 "GET /session/abcd23faa78d8294782fcfaff119a10c/element/f.7177F5F22BEC6D3E423BCC69F7569B42.d.50F9D8DC83EB02F7E8183C1D15672C76.e.204/text HTTP/1.1" 200 0
+2025-05-13 00:02:32,135 [DEBUG] Remote response: status=200 | data={"value":"THERMAGE TOTAL TIP 3.0CM2, 900 REP"} | headers=HTTPHeaderDict({'Content-Length': '46', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:32,135 [DEBUG] Finished Request
+2025-05-13 00:02:32,136 [INFO] Found product name: THERMAGE TOTAL TIP 3.0CM2, 900 REP
+2025-05-13 00:02:32,136 [DEBUG] POST http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/element {'using': 'css selector', 'value': '.price.price--product-page'}
+2025-05-13 00:02:32,140 [DEBUG] http://localhost:50259 "POST /session/abcd23faa78d8294782fcfaff119a10c/element HTTP/1.1" 200 0
+2025-05-13 00:02:32,140 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.7177F5F22BEC6D3E423BCC69F7569B42.d.50F9D8DC83EB02F7E8183C1D15672C76.e.205"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:32,141 [DEBUG] Finished Request
+2025-05-13 00:02:32,141 [DEBUG] GET http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c/element/f.7177F5F22BEC6D3E423BCC69F7569B42.d.50F9D8DC83EB02F7E8183C1D15672C76.e.205/text {}
+2025-05-13 00:02:32,145 [DEBUG] http://localhost:50259 "GET /session/abcd23faa78d8294782fcfaff119a10c/element/f.7177F5F22BEC6D3E423BCC69F7569B42.d.50F9D8DC83EB02F7E8183C1D15672C76.e.205/text HTTP/1.1" 200 0
+2025-05-13 00:02:32,145 [DEBUG] Remote response: status=200 | data={"value":"EUR 355,00"} | headers=HTTPHeaderDict({'Content-Length': '22', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:32,145 [DEBUG] Finished Request
+2025-05-13 00:02:32,145 [INFO] Found price with method 1: EUR 355,00
+2025-05-13 00:02:32,145 [INFO] Cleaned price: 355.00
+2025-05-13 00:02:32,145 [INFO] Final price extracted: 355.00
+2025-05-13 00:02:32,147 [DEBUG] Scraped from <200 https://www.directdermasupplies.com/products/thermage/thermage-eye-tip-0-25cm2-450-rep>
+{'product_url': 'https://www.directdermasupplies.com/products/thermage/thermage-eye-tip-0-25cm2-450-rep', 'product_name': 'THERMAGE EYE TIP 0.25CM2, 450 REP', 'price': '240.00', 'currency': 'EUR', 'timestamp': '2025-05-13 00:02:25'}
+2025-05-13 00:02:32,147 [DEBUG] Scraped from <200 https://www.directdermasupplies.com/products/thermage/thermage-total-tip-3-0cm2-900-rep>
+{'product_url': 'https://www.directdermasupplies.com/products/thermage/thermage-total-tip-3-0cm2-900-rep', 'product_name': 'THERMAGE TOTAL TIP 3.0CM2, 900 REP', 'price': '355.00', 'currency': 'EUR', 'timestamp': '2025-05-13 00:02:32'}
+2025-05-13 00:02:32,148 [INFO] Closing spider (finished)
+2025-05-13 00:02:32,148 [DEBUG] DELETE http://localhost:50259/session/abcd23faa78d8294782fcfaff119a10c {}
+2025-05-13 00:02:32,212 [DEBUG] http://localhost:50259 "DELETE /session/abcd23faa78d8294782fcfaff119a10c HTTP/1.1" 200 0
+2025-05-13 00:02:32,213 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-13 00:02:32,213 [DEBUG] Finished Request
+2025-05-13 00:02:34,277 [INFO] Dumping Scrapy stats:
+{'downloader/request_bytes': 855,
+ 'downloader/request_count': 3,
+ 'downloader/request_method_count/GET': 3,
+ 'downloader/response_bytes': 41284,
+ 'downloader/response_count': 3,
+ 'downloader/response_status_count/200': 3,
+ 'elapsed_time_seconds': 18.884824,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 5, 12, 16, 2, 34, 276829, tzinfo=datetime.timezone.utc),
+ 'httpcache/hit': 3,
+ 'httpcompression/response_bytes': 329050,
+ 'httpcompression/response_count': 3,
+ 'item_scraped_count': 2,
+ 'items_per_minute': 6.666666666666667,
+ 'log_count/DEBUG': 69,
+ 'log_count/INFO': 18,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 3,
+ 'responses_per_minute': 10.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2025, 5, 12, 16, 2, 15, 392005, tzinfo=datetime.timezone.utc)}
+2025-05-13 00:02:34,278 [INFO] Spider closed (finished)
+2025-05-13 00:02:34,279 [ERROR] Output file new_results.json was not created
+2025-05-13 00:02:34,280 [INFO] Scraping complete. Results saved to new_results.json
+2025-05-13 00:03:14,899 [INFO] Using input file: urls_to_scrape.txt
+2025-05-13 00:03:14,899 [INFO] Starting scraper, output will be saved to fixed_results.json
+2025-05-13 00:03:35,528 [INFO] Scraping complete. Found 2 results.
+2025-05-13 00:03:35,528 [INFO] Scraping complete. Results saved to fixed_results.json
+2025-05-13 01:22:37,101 [INFO] Using input file: C:\Users\lapmi\AppData\Local\Temp\tmpqxh3nlug.txt
+2025-05-13 01:22:37,102 [INFO] Starting scraper, output will be saved to thermage_results.json
+2025-05-13 01:23:49,136 [INFO] Scraping complete. Found 10 results.
+2025-05-13 01:23:49,137 [INFO] Scraping complete. Results saved to thermage_results.json
+2025-05-13 01:43:25,474 [INFO] Using input file: C:\Users\lapmi\AppData\Local\Temp\tmpntonl_49.txt
+2025-05-13 01:43:25,474 [INFO] Starting scraper, output will be saved to search_results\thermage_results.json
+2025-05-13 01:44:32,927 [INFO] Scraping complete. Found 10 results.
+2025-05-13 01:44:32,927 [INFO] Scraping complete. Results saved to search_results\thermage_results.json
+2025-05-13 01:44:45,079 [INFO] Using input file: C:\Users\lapmi\AppData\Local\Temp\tmpe9ykxwhi.txt
+2025-05-13 01:44:45,080 [INFO] Starting scraper, output will be saved to search_results\filler_results.json
+2025-05-13 01:46:18,395 [INFO] Scraping complete. Found 13 results.
+2025-05-13 01:46:18,396 [INFO] Scraping complete. Results saved to search_results\filler_results.json
+2025-05-13 13:51:32,530 [INFO] Using input file: C:\Users\user\AppData\Local\Temp\tmph1zruwbl.txt
+2025-05-13 13:51:32,531 [INFO] Starting scraper, output will be saved to my_results\thermage_results.json
+2025-05-13 13:52:39,420 [INFO] Scraping complete. Found 10 results.
+2025-05-13 13:52:39,420 [INFO] Scraping complete. Results saved to my_results\thermage_results.json
+2025-05-13 13:52:52,208 [INFO] Using input file: C:\Users\user\AppData\Local\Temp\tmpbt4yum8n.txt
+2025-05-13 13:52:52,208 [INFO] Starting scraper, output will be saved to my_results\filler_results.json
+2025-05-13 13:54:14,115 [INFO] Scraping complete. Found 13 results.
+2025-05-13 13:54:14,115 [INFO] Scraping complete. Results saved to my_results\filler_results.json

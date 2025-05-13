@@ -1,0 +1,244 @@
+2025-05-13 01:19:59,423 [INFO] Searching for products with keyword: thermage
+2025-05-13 01:19:59,425 [INFO] ====== WebDriver manager ======
+2025-05-13 01:20:00,293 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:20:02,161 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:20:02,639 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 01:20:03,893 [INFO] Accessing search URL: https://www.directdermasupplies.com/search?q=thermage
+2025-05-13 01:20:12,045 [INFO] Found 0 matching products
+2025-05-13 01:20:31,741 [INFO] Searching for products with keyword: filler
+2025-05-13 01:20:31,742 [INFO] ====== WebDriver manager ======
+2025-05-13 01:20:32,540 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:20:32,989 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:20:33,431 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 01:20:34,572 [INFO] Accessing search URL: https://www.directdermasupplies.com/search?q=filler
+2025-05-13 01:20:42,576 [INFO] Found 0 matching products
+2025-05-13 01:22:23,316 [INFO] Searching for products with keyword: thermage
+2025-05-13 01:22:23,316 [INFO] ====== WebDriver manager ======
+2025-05-13 01:22:24,065 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:22:24,518 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:22:24,966 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 01:22:26,145 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=thermage
+2025-05-13 01:22:34,237 [INFO] Found 10 matching products
+2025-05-13 01:22:36,364 [INFO] Created temporary URL file with 10 URLs: C:\Users\lapmi\AppData\Local\Temp\tmpqxh3nlug.txt
+2025-05-13 01:22:36,365 [INFO] Running scraper with command: python run_scraper.py --input C:\Users\lapmi\AppData\Local\Temp\tmpqxh3nlug.txt --output thermage_results.json
+2025-05-13 01:23:49,209 [INFO] Successfully scraped 10 products
+2025-05-13 01:23:49,212 [INFO] Search and scraping complete. Results saved to thermage_results.json
+2025-05-13 01:43:10,315 [INFO] Searching for products with keyword: thermage
+2025-05-13 01:43:10,316 [INFO] ====== WebDriver manager ======
+2025-05-13 01:43:11,029 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:43:11,494 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:43:11,951 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 01:43:13,132 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=thermage
+2025-05-13 01:43:22,855 [INFO] Found 10 matching products
+2025-05-13 01:43:24,941 [INFO] Created temporary URL file with 10 URLs: C:\Users\lapmi\AppData\Local\Temp\tmpntonl_49.txt
+2025-05-13 01:43:24,941 [INFO] Running scraper with command: python run_scraper.py --input C:\Users\lapmi\AppData\Local\Temp\tmpntonl_49.txt --output search_results\thermage_results.json
+2025-05-13 01:44:32,992 [INFO] Successfully scraped 10 products
+2025-05-13 01:44:32,993 [INFO] Search and scraping complete. Results saved to search_results\thermage_results.json
+2025-05-13 01:44:33,512 [INFO] Searching for products with keyword: filler
+2025-05-13 01:44:33,513 [INFO] ====== WebDriver manager ======
+2025-05-13 01:44:34,199 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:44:34,644 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:44:35,101 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 01:44:36,325 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=filler
+2025-05-13 01:44:42,454 [INFO] Found 13 matching products
+2025-05-13 01:44:44,560 [INFO] Created temporary URL file with 13 URLs: C:\Users\lapmi\AppData\Local\Temp\tmpe9ykxwhi.txt
+2025-05-13 01:44:44,560 [INFO] Running scraper with command: python run_scraper.py --input C:\Users\lapmi\AppData\Local\Temp\tmpe9ykxwhi.txt --output search_results\filler_results.json
+2025-05-13 01:46:18,467 [INFO] Successfully scraped 13 products
+2025-05-13 01:46:18,467 [INFO] Search and scraping complete. Results saved to search_results\filler_results.json
+2025-05-13 01:46:19,153 [INFO] Searching for products with keyword: botox
+2025-05-13 01:46:19,153 [INFO] ====== WebDriver manager ======
+2025-05-13 01:46:19,858 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:46:20,316 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 01:46:20,769 [INFO] Driver [C:\Users\lapmi\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 01:46:21,946 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=botox
+2025-05-13 01:46:29,566 [INFO] Found 0 matching products
+2025-05-13 12:14:19,763 [INFO] Searching for products with keyword: thermage
+2025-05-13 12:14:19,763 [INFO] ====== WebDriver manager ======
+2025-05-13 12:14:20,642 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 12:14:20,764 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 12:14:20,880 [INFO] There is no [win64] chromedriver "136.0.7103.92" for browser google-chrome "136.0.7103" in cache
+2025-05-13 12:14:20,880 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 12:14:21,180 [INFO] WebDriver version 136.0.7103.92 selected
+2025-05-13 12:14:21,196 [INFO] Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.92/win32/chromedriver-win32.zip
+2025-05-13 12:14:21,196 [INFO] About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.92/win32/chromedriver-win32.zip
+2025-05-13 12:14:21,247 [INFO] Driver downloading response is 200
+2025-05-13 12:14:21,530 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 12:14:43,792 [INFO] Driver has been saved in cache [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92]
+2025-05-13 12:14:45,105 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=thermage
+2025-05-13 12:14:52,523 [INFO] Found 10 matching products
+2025-05-13 12:14:54,699 [INFO] Created temporary URL file with 10 URLs: C:\Users\user\AppData\Local\Temp\tmp0vmth6jv.txt
+2025-05-13 12:14:54,699 [INFO] Running scraper with command: python run_scraper.py --input C:\Users\user\AppData\Local\Temp\tmp0vmth6jv.txt --output my_results\thermage_results.json
+2025-05-13 12:14:54,795 [ERROR] An error occurred: Command '['python', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmp0vmth6jv.txt', '--output', 'my_results\\thermage_results.json']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 234, in main
+    results = scrape_product_prices(product_urls, args.output)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 139, in scrape_product_prices
+    subprocess.run(cmd, check=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmp0vmth6jv.txt', '--output', 'my_results\\thermage_results.json']' returned non-zero exit status 1.
+2025-05-13 12:14:55,562 [INFO] Searching for products with keyword: filler
+2025-05-13 12:14:55,562 [INFO] ====== WebDriver manager ======
+2025-05-13 12:14:56,406 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 12:14:56,527 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 12:14:56,650 [INFO] Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 12:14:57,714 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=filler
+2025-05-13 12:15:05,116 [INFO] Found 13 matching products
+2025-05-13 12:15:07,269 [INFO] Created temporary URL file with 13 URLs: C:\Users\user\AppData\Local\Temp\tmp2efw81hf.txt
+2025-05-13 12:15:07,269 [INFO] Running scraper with command: python run_scraper.py --input C:\Users\user\AppData\Local\Temp\tmp2efw81hf.txt --output my_results\filler_results.json
+2025-05-13 12:15:07,344 [ERROR] An error occurred: Command '['python', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmp2efw81hf.txt', '--output', 'my_results\\filler_results.json']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 234, in main
+    results = scrape_product_prices(product_urls, args.output)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 139, in scrape_product_prices
+    subprocess.run(cmd, check=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmp2efw81hf.txt', '--output', 'my_results\\filler_results.json']' returned non-zero exit status 1.
+2025-05-13 12:15:08,124 [INFO] Searching for products with keyword: botox
+2025-05-13 12:15:08,124 [INFO] ====== WebDriver manager ======
+2025-05-13 12:15:08,959 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 12:15:09,093 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 12:15:09,211 [INFO] Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 12:15:10,295 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=botox
+2025-05-13 12:15:17,427 [INFO] Found 0 matching products
+2025-05-13 13:36:40,864 [INFO] Searching for products with keyword: thermage
+2025-05-13 13:36:40,864 [INFO] ====== WebDriver manager ======
+2025-05-13 13:36:41,979 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:36:42,125 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:36:42,259 [INFO] Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 13:36:43,423 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=thermage
+2025-05-13 13:36:50,753 [INFO] Found 10 matching products
+2025-05-13 13:36:52,907 [INFO] Created temporary URL file with 10 URLs: C:\Users\user\AppData\Local\Temp\tmpeip26del.txt
+2025-05-13 13:36:52,908 [INFO] Running scraper with command: python run_scraper.py --input C:\Users\user\AppData\Local\Temp\tmpeip26del.txt --output test_output.json
+2025-05-13 13:36:53,028 [ERROR] An error occurred: Command '['python', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmpeip26del.txt', '--output', 'test_output.json']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 234, in main
+    results = scrape_product_prices(product_urls, args.output)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 139, in scrape_product_prices
+    subprocess.run(cmd, check=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmpeip26del.txt', '--output', 'test_output.json']' returned non-zero exit status 1.
+2025-05-13 13:44:44,000 [INFO] Searching for products with keyword: thermage
+2025-05-13 13:44:44,000 [INFO] ====== WebDriver manager ======
+2025-05-13 13:44:44,915 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:44:45,049 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:44:45,175 [INFO] Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 13:44:46,229 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=thermage
+2025-05-13 13:44:53,232 [INFO] Found 10 matching products
+2025-05-13 13:44:55,386 [INFO] Created temporary URL file with 10 URLs: C:\Users\user\AppData\Local\Temp\tmp_k7zs_3w.txt
+2025-05-13 13:44:55,387 [INFO] Running scraper with command: C:\Users\user\Desktop\Python\direct_derma_scraper\venv\Scripts\python.exe run_scraper.py --input C:\Users\user\AppData\Local\Temp\tmp_k7zs_3w.txt --output my_results\thermage_results.json
+2025-05-13 13:44:55,515 [ERROR] An error occurred: Command '['C:\\Users\\user\\Desktop\\Python\\direct_derma_scraper\\venv\\Scripts\\python.exe', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmp_k7zs_3w.txt', '--output', 'my_results\\thermage_results.json']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 234, in main
+    results = scrape_product_prices(product_urls, args.output)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 139, in scrape_product_prices
+    subprocess.run(cmd, check=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\user\\Desktop\\Python\\direct_derma_scraper\\venv\\Scripts\\python.exe', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmp_k7zs_3w.txt', '--output', 'my_results\\thermage_results.json']' returned non-zero exit status 1.
+2025-05-13 13:44:56,280 [INFO] Searching for products with keyword: filler
+2025-05-13 13:44:56,282 [INFO] ====== WebDriver manager ======
+2025-05-13 13:44:57,145 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:44:57,267 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:44:57,393 [INFO] Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 13:44:58,498 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=filler
+2025-05-13 13:45:05,812 [INFO] Found 13 matching products
+2025-05-13 13:45:07,964 [INFO] Created temporary URL file with 13 URLs: C:\Users\user\AppData\Local\Temp\tmpy2o890hv.txt
+2025-05-13 13:45:07,964 [INFO] Running scraper with command: C:\Users\user\Desktop\Python\direct_derma_scraper\venv\Scripts\python.exe run_scraper.py --input C:\Users\user\AppData\Local\Temp\tmpy2o890hv.txt --output my_results\filler_results.json
+2025-05-13 13:45:08,093 [ERROR] An error occurred: Command '['C:\\Users\\user\\Desktop\\Python\\direct_derma_scraper\\venv\\Scripts\\python.exe', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmpy2o890hv.txt', '--output', 'my_results\\filler_results.json']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 234, in main
+    results = scrape_product_prices(product_urls, args.output)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 139, in scrape_product_prices
+    subprocess.run(cmd, check=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\user\\Desktop\\Python\\direct_derma_scraper\\venv\\Scripts\\python.exe', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmpy2o890hv.txt', '--output', 'my_results\\filler_results.json']' returned non-zero exit status 1.
+2025-05-13 13:45:08,864 [INFO] Searching for products with keyword: botox
+2025-05-13 13:45:08,864 [INFO] ====== WebDriver manager ======
+2025-05-13 13:45:09,752 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:45:09,865 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:45:10,002 [INFO] Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 13:45:11,071 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=botox
+2025-05-13 13:45:18,993 [INFO] Found 0 matching products
+2025-05-13 13:51:15,247 [INFO] Searching for products with keyword: thermage
+2025-05-13 13:51:15,247 [INFO] ====== WebDriver manager ======
+2025-05-13 13:51:16,117 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:51:16,242 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:51:16,367 [INFO] Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 13:51:17,426 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=thermage
+2025-05-13 13:51:24,390 [INFO] Found 10 matching products
+2025-05-13 13:51:26,533 [INFO] Created temporary URL file with 10 URLs: C:\Users\user\AppData\Local\Temp\tmph1zruwbl.txt
+2025-05-13 13:51:26,533 [INFO] Running scraper with command: C:\Users\user\Desktop\Python\direct_derma_scraper\venv\Scripts\python.exe run_scraper.py --input C:\Users\user\AppData\Local\Temp\tmph1zruwbl.txt --output my_results\thermage_results.json
+2025-05-13 13:52:39,469 [INFO] Successfully scraped 10 products
+2025-05-13 13:52:39,470 [INFO] Search and scraping complete. Results saved to my_results\thermage_results.json
+2025-05-13 13:52:40,291 [INFO] Searching for products with keyword: filler
+2025-05-13 13:52:40,291 [INFO] ====== WebDriver manager ======
+2025-05-13 13:52:41,168 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:52:41,301 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:52:41,443 [INFO] Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 13:52:42,529 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=filler
+2025-05-13 13:52:49,542 [INFO] Found 13 matching products
+2025-05-13 13:52:51,695 [INFO] Created temporary URL file with 13 URLs: C:\Users\user\AppData\Local\Temp\tmpbt4yum8n.txt
+2025-05-13 13:52:51,695 [INFO] Running scraper with command: C:\Users\user\Desktop\Python\direct_derma_scraper\venv\Scripts\python.exe run_scraper.py --input C:\Users\user\AppData\Local\Temp\tmpbt4yum8n.txt --output my_results\filler_results.json
+2025-05-13 13:54:14,161 [INFO] Successfully scraped 13 products
+2025-05-13 13:54:14,162 [INFO] Search and scraping complete. Results saved to my_results\filler_results.json
+2025-05-13 13:54:14,966 [INFO] Searching for products with keyword: botox
+2025-05-13 13:54:14,966 [INFO] ====== WebDriver manager ======
+2025-05-13 13:54:15,828 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:54:15,938 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:54:16,064 [INFO] Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 13:54:17,181 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=botox
+2025-05-13 13:54:24,037 [INFO] Found 0 matching products
+2025-05-13 13:55:40,379 [INFO] Searching for products with keyword: thermage
+2025-05-13 13:55:40,379 [INFO] ====== WebDriver manager ======
+2025-05-13 13:55:41,228 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:55:41,355 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:55:41,479 [INFO] Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 13:55:42,544 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=thermage
+2025-05-13 13:55:49,492 [INFO] Found 10 matching products
+2025-05-13 13:55:51,644 [INFO] Created temporary URL file with 10 URLs: C:\Users\user\AppData\Local\Temp\tmpq4l_1zsp.txt
+2025-05-13 13:55:51,644 [INFO] Running scraper with command: C:\Users\user\Desktop\Python\direct_derma_scraper\venv\Scripts\python.exe run_scraper.py --input C:\Users\user\AppData\Local\Temp\tmpq4l_1zsp.txt --output my_results\thermage_results.json
+2025-05-13 13:55:51,760 [ERROR] An error occurred: Command '['C:\\Users\\user\\Desktop\\Python\\direct_derma_scraper\\venv\\Scripts\\python.exe', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmpq4l_1zsp.txt', '--output', 'my_results\\thermage_results.json']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 234, in main
+    results = scrape_product_prices(product_urls, args.output)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 139, in scrape_product_prices
+    subprocess.run(cmd, check=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\user\\Desktop\\Python\\direct_derma_scraper\\venv\\Scripts\\python.exe', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmpq4l_1zsp.txt', '--output', 'my_results\\thermage_results.json']' returned non-zero exit status 1.
+2025-05-13 13:55:52,526 [INFO] Searching for products with keyword: filler
+2025-05-13 13:55:52,526 [INFO] ====== WebDriver manager ======
+2025-05-13 13:55:53,387 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:55:53,512 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:55:53,619 [INFO] Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 13:55:54,683 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=filler
+2025-05-13 13:56:02,114 [INFO] Found 13 matching products
+2025-05-13 13:56:04,293 [INFO] Created temporary URL file with 13 URLs: C:\Users\user\AppData\Local\Temp\tmptfmzyu6n.txt
+2025-05-13 13:56:04,293 [INFO] Running scraper with command: C:\Users\user\Desktop\Python\direct_derma_scraper\venv\Scripts\python.exe run_scraper.py --input C:\Users\user\AppData\Local\Temp\tmptfmzyu6n.txt --output my_results\filler_results.json
+2025-05-13 13:56:04,384 [ERROR] An error occurred: Command '['C:\\Users\\user\\Desktop\\Python\\direct_derma_scraper\\venv\\Scripts\\python.exe', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmptfmzyu6n.txt', '--output', 'my_results\\filler_results.json']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 234, in main
+    results = scrape_product_prices(product_urls, args.output)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Python\direct_derma_scraper\search_products.py", line 139, in scrape_product_prices
+    subprocess.run(cmd, check=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\user\\Desktop\\Python\\direct_derma_scraper\\venv\\Scripts\\python.exe', 'run_scraper.py', '--input', 'C:\\Users\\user\\AppData\\Local\\Temp\\tmptfmzyu6n.txt', '--output', 'my_results\\filler_results.json']' returned non-zero exit status 1.
+2025-05-13 13:56:05,144 [INFO] Searching for products with keyword: botox
+2025-05-13 13:56:05,144 [INFO] ====== WebDriver manager ======
+2025-05-13 13:56:06,004 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:56:06,135 [INFO] Get LATEST chromedriver version for google-chrome
+2025-05-13 13:56:06,244 [INFO] Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\136.0.7103.92\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-13 13:56:07,323 [INFO] Accessing search URL: https://www.directdermasupplies.com/products?Search=botox
+2025-05-13 13:56:14,128 [INFO] Found 0 matching products

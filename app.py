@@ -160,67 +160,87 @@ def main():
     with tab1:
         # File upload section for keywords
         st.header("Search by Keywords")
-        file_type = st.radio("File type:", ["Text file (.txt)", "Excel file (.xlsx)"], key="keyword_file_type")
         
-        # Column name input for Excel
-        column_name = None
-        if file_type == "Excel file (.xlsx)":
-            column_name = st.text_input("Column name (leave empty to use first column):")
+        # Add option to choose input method
+        keyword_input_method = st.radio("Input method:", ["Upload file", "Enter keywords manually"], key="keyword_input_method")
         
-        uploaded_file = st.file_uploader(
-            "Upload a file with keywords:", 
-            type=["txt", "xlsx"] if file_type == "Excel file (.xlsx)" else ["txt"],
-            help="For text files, each line should contain one keyword. For Excel files, keywords should be in the first column or specified column.",
-            key="keyword_uploader"
-        )
+        keywords = []
+        
+        if keyword_input_method == "Upload file":
+            file_type = st.radio("File type:", ["Text file (.txt)", "Excel file (.xlsx)"], key="keyword_file_type")
+            
+            # Column name input for Excel
+            column_name = None
+            if file_type == "Excel file (.xlsx)":
+                column_name = st.text_input("Column name (leave empty to use first column):")
+            
+            uploaded_file = st.file_uploader(
+                "Upload a file with keywords:", 
+                type=["txt", "xlsx"] if file_type == "Excel file (.xlsx)" else ["txt"],
+                help="For text files, each line should contain one keyword. For Excel files, keywords should be in the first column or specified column.",
+                key="keyword_uploader"
+            )
+            
+            if uploaded_file is not None:
+                st.write(f"File uploaded: {uploaded_file.name}")
+                
+                # Extract keywords from the file
+                is_excel = file_type == "Excel file (.xlsx)"
+                keywords = read_keywords_from_file(uploaded_file, is_excel, column_name)
+        else:
+            # Manual keyword entry
+            keyword_text = st.text_area(
+                "Enter keywords (one per line):",
+                height=200,
+                help="Enter one keyword per line."
+            )
+            
+            if keyword_text:
+                keywords = [keyword.strip() for keyword in keyword_text.split("\n") if keyword.strip()]
         
         # Directory for results
         output_dir = st.text_input("Output directory:", "keyword_results")
         
         # Search button
-        if uploaded_file is not None:
-            st.write(f"File uploaded: {uploaded_file.name}")
+        if keywords:
+            st.write(f"Found {len(keywords)} keywords:")
+            st.write(", ".join(keywords[:10]) + ("..." if len(keywords) > 10 else ""))
             
-            # Extract keywords from the file
-            is_excel = file_type == "Excel file (.xlsx)"
-            keywords = read_keywords_from_file(uploaded_file, is_excel, column_name)
-            
-            if keywords:
-                st.write(f"Found {len(keywords)} keywords:")
-                st.write(", ".join(keywords[:10]) + ("..." if len(keywords) > 10 else ""))
+            # Run search
+            if st.button("Run Keyword Search"):
+                # Create output directory if it doesn't exist
+                os.makedirs(output_dir, exist_ok=True)
                 
-                # Run search
-                if st.button("Run Keyword Search"):
-                    # Create output directory if it doesn't exist
-                    os.makedirs(output_dir, exist_ok=True)
+                # Show progress
+                with st.spinner("Running search..."):
+                    start_time = time.time()
+                    success = run_batch_search(keywords, output_dir)
+                    end_time = time.time()
                     
-                    # Show progress
-                    with st.spinner("Running search..."):
-                        start_time = time.time()
-                        success = run_batch_search(keywords, output_dir)
-                        end_time = time.time()
+                    if success:
+                        st.success(f"Search completed in {end_time - start_time:.2f} seconds!")
                         
-                        if success:
-                            st.success(f"Search completed in {end_time - start_time:.2f} seconds!")
+                        # Create Excel file
+                        excel_file = f"keyword_search_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
+                        with st.spinner("Exporting results to Excel..."):
+                            export_success = export_to_excel(output_dir, excel_file)
                             
-                            # Create Excel file
-                            excel_file = f"keyword_search_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
-                            with st.spinner("Exporting results to Excel..."):
-                                export_success = export_to_excel(output_dir, excel_file)
-                                
-                                if export_success and os.path.exists(excel_file):
-                                    # Provide download link
-                                    with open(excel_file, "rb") as file:
-                                        st.download_button(
-                                            label="Download Excel Results",
-                                            data=file,
-                                            file_name=excel_file,
-                                            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                                        )
-                        else:
-                            st.error("Search failed. Check the logs for details.")
+                            if export_success and os.path.exists(excel_file):
+                                # Provide download link
+                                with open(excel_file, "rb") as file:
+                                    st.download_button(
+                                        label="Download Excel Results",
+                                        data=file,
+                                        file_name=excel_file,
+                                        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                                    )
+                    else:
+                        st.error("Search failed. Check the logs for details.")
+        else:
+            if keyword_input_method == "Upload file":
+                st.warning("Please upload a file with keywords.")
             else:
-                st.warning("No keywords found in the uploaded file.")
+                st.warning("Please enter at least one keyword.")
     
     with tab2:
         # URL scraper section
@@ -246,18 +266,32 @@ def main():
                 urls_to_scrape = [url.strip() for url in url_text.split("\n") if url.strip()]
                 
         else:  # Upload URL file
+            file_type = st.radio("File type:", ["Text file (.txt)", "Excel file (.xlsx)"], key="url_file_type")
+            
+            column_name = None
+            if file_type == "Excel file (.xlsx)":
+                column_name = st.text_input("Column name for URLs (leave empty to use first column):", 
+                                          key="url_column_name")
+            
             url_file = st.file_uploader(
                 "Upload a file with URLs:", 
-                type=["txt"],
-                help="Text file with one URL per line.",
+                type=["txt", "xlsx"] if file_type == "Excel file (.xlsx)" else ["txt"],
+                help="For text files, each line should contain one URL. For Excel files, URLs should be in the first column or specified column.",
                 key="url_uploader"
             )
             
             if url_file is not None:
                 try:
-                    content = url_file.getvalue().decode('utf-8')
-                    urls_to_scrape = [url.strip() for url in content.split('\n') if url.strip()]
                     st.write(f"File uploaded: {url_file.name}")
+                    
+                    if file_type == "Excel file (.xlsx)":
+                        # Excel file processing
+                        urls_to_scrape = read_keywords_from_file(url_file, is_excel=True, column_name=column_name)
+                    else:
+                        # Text file processing
+                        content = url_file.getvalue().decode('utf-8')
+                        urls_to_scrape = [url.strip() for url in content.split('\n') if url.strip()]
+                        
                 except Exception as e:
                     st.error(f"Error reading URL file: {str(e)}")
         
@@ -412,13 +446,13 @@ def main():
         ### How to use:
         
         #### Keyword Search:
-        1. **Upload a file** with keywords (text file or Excel)
+        1. **Upload a file** with keywords (text file or Excel) or **enter keywords manually**
         2. **Run the search** to find and scrape matching products
         3. **View results** in the Results tab
         4. **Download results** as an Excel file
         
         #### URL Scraper:
-        1. **Enter URLs** manually or upload a text file with URLs
+        1. **Enter URLs** manually or upload a text/Excel file with URLs
         2. **Run the scraper** to directly scrape product information
         3. **View results** immediately
         4. **Export to Excel** if needed

@@ -1,13 +1,13 @@
-Direct Derma Search Summary - 2025-05-13 19:40:39
+Direct Derma Search Summary - 2025-05-14 00:03:46
 ================================================================================
 
-Keyword: nucleofill
-Products found: 6
-Results file: nucleofill_results.json
+Keyword: harmonyca
+Products found: 1
+Results file: harmonyca_results.json
 --------------------------------------------------
 
-Keyword: thermage
-Products found: 10
-Results file: thermage_results.json
+Keyword: tsk
+Products found: 22
+Results file: tsk_results.json
 --------------------------------------------------
 
